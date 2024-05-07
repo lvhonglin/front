@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 方法1 */
+        .parent{
+            overflow: hidden;
+            color: #fff;
+        }
+        .leftchild{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .rightchild{
+            height: 100px;
+            margin-left: 100px;
+            background: green;
+        }
+
+        /* 方法2 */
+        .positionparent{
+            position: relative;
+        }
+        .posileft{
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: grey;
+        }
+        .posiright{
+            height: 100px;
+            margin-left: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <div class="leftchild">222</div>
+        <div class="rightchild">我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我
+            是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自
+            适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应</div>
+    </div>
+    
+
+    <div class="positionparent">
+
+        <div class="posileft">222</div>
+        <div class="posiright">我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我
+            是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自
+            适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应</div>
+    </div>
+</body>
+</html>

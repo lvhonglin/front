@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式权重计算</title>
+    <style type="text/css">
+        /* 通配符选择器优先级最低 */
+        *{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        /* 标签选择器 */
+        body,html{
+            background: #fff;
+        }
+        div{
+            background: black;
+        }
+        /* 类选择器 */
+        .tim{
+            background: red;
+        }
+        /* id选择器 */
+        #xiaod{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="time" id="xiaod" ></div>
+</body>
+</html>

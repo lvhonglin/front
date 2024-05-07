@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .fenye{
+            overflow: hidden;
+        }
+        .fenye li{
+            float: left;
+            width: 30px;
+            height: 30px;
+            background: red;
+            color: #fff;
+            margin-right: 5px;
+            list-style: none;
+
+            /* 让文字在容器内水平居中 */
+            line-height: 30px;
+            text-align: center;
+        }
+
+
+        /* 方法2 */
+        .imgbox{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            
+            /* 水平垂直居中 */
+            line-height: 200px;
+            text-align: center;
+        }
+        .imgbox img{
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            /* 水平垂直居中 */
+            vertical-align: middle;
+        }
+
+        /* 方法3 */
+        .imgbox2{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .imgbox2 img{
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            /* 水平垂直居中 */
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="fenye">
+        <li>1</li> 
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <div class="imgbox">
+        我是水平垂直居中
+        <img src="img/test1.png">
+    </div>
+
+    <div class="imgbox2">
+        
+        <img src="img/test1.png">
+    </div>
+</body>
+</html>

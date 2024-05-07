@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        /* 方法1 */
+        .parent{
+            overflow: hidden;
+            color: #fff;
+        }
+        .leftchild{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .midchild{
+            margin-left: 100px;
+            margin-right: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .rightchild{
+            float: right;
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        /* 方法2 */
+        .positionparent{
+            position: relative;
+        }
+        .posileft{
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .posimid{
+            position: relative;
+            margin-left: 100px;
+            margin-right: 100px;
+            height: 100px;
+            background: blue;
+        }
+        .posiright{
+            position: fixed;
+            right: 0px;
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <div class="leftchild">222</div>
+        <div class="midchild">我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我
+            是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自
+            适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应</div>
+        <div class="rightchild">333</div>
+    </div>
+    
+
+    <div class="positionparent">
+
+        <div class="posileft">222</div>
+        <div class="posimid">我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我
+            是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自
+            适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应我是自适应</div>
+        <div class="posiright">333</div>
+    </div>
+</body>
+</html>

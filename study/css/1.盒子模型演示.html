@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .content{
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
+        }
+        /* 如果height和width包括padding就是怪异盒子模型，不包括就是标准盒子模型 */
+        #tim{
+            /* 这个border-box的设置，就将其改为怪异盒子模型 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="tim">1</div>
+    <hr>
+    <div class="content" id="xiaod">2</div>
+</body>
+</html>

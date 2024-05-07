@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第一种清除浮动的方法,父元素上设置overflow:hidden */
+        .test1{
+            overflow: hidden;
+        }
+        .test2{
+            overflow: hidden;
+        }
+
+        /* 第二种清除浮动的方法,在父元素上设置伪类(推荐这个方式) */
+        /* ul:after{
+            content: "";
+            display: block;
+            clear: both;
+        } */
+        
+        /* 第三种清除浮动的方法,写一个空的元素,设置样式为clear:both */
+        /* .clear{
+            clear: both;
+        } */
+
+
+        /* ul li表示所有在ul下的li标签(后代选择器) */
+        .test1 ul{
+            list-style: none; /*去掉li里面的小圆点*/
+            float: left; /*所有列并排展示*/
+        }
+        .test2 ul{
+            list-style: none; /*去掉li里面的小圆点*/
+            float: left; /*所有列并排展示*/
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="test1" >
+        <ul>
+            <li>新闻列表1</li>
+            <li>新闻列表2</li>
+            <li>新闻列表3</li>
+        </ul>
+        <ul>
+            <li>新闻列表1</li>
+            <li>新闻列表2</li>
+            <li>新闻列表3</li>
+        </ul>
+    </div>
+    <div class="test2">
+        <ul>
+            <li>aaa</li>
+            <li>aaa</li>
+            <li>aaa</li>
+        </ul>
+        <ul>
+            <li>aaa</li>
+            <li>aaa</li>
+            <li>aaa</li>
+        </ul>
+    </div>
+</body>
+</html>

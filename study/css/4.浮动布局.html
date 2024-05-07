@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 第一种清除浮动的方法,父元素上设置overflow:hidden */
+        /* ul{
+            overflow: hidden;
+        } */
+
+        /* 第二种清除浮动的方法,在父元素上设置伪类(推荐这个方式) */
+        /* ul:after{
+            content: "";
+            display: block;
+            clear: both;
+        } */
+        
+        /* 第三种清除浮动的方法,写一个空的元素,设置样式为clear:both */
+        .clear{
+            clear: both;
+        }
+
+
+        /* ul li表示所有在ul下的li标签(后代选择器) */
+        ul li{
+            list-style: none; /*去掉li里面的小圆点*/
+            float: left; /*所有列并排展示*/
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>新闻列表1</li>
+        <li>新闻列表2</li>
+        <li>新闻列表3</li>
+       
+        <div class="clear"></div> <!-- 这个是给第三个方式用的 -->
+    </ul>
+    <div>我并没有设置浮动,我是块级元素,我要自己一行</div>
+</body>
+</html>
