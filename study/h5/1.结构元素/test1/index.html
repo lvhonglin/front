@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通常是顶部 */
+        header{
+            width: 1200px;
+            margin: 0 auto ;
+        }
+        header img{
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+        }
+        /* nav一般表示导航 */
+        header nav{
+            display: inline-block;
+            margin-left: 100px;
+        }
+        /* 一般是正文，section是正文里面的内容分组 */
+        article{
+            float: left;
+            width: 680px;
+            border: 1px solid #000;
+        }
+        /* 对页面起道补充作用 */
+        aside{
+            float: right;
+            width: 400px;
+            border: 1px solid #000;
+        }
+        main{
+            overflow: hidden;
+        }
+        /* 底部比如版权信息，联系方式等 */
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../../img/logo.png" alt="">
+        <nav>
+            <a href="">html5</a>
+            <a href="">css3</a>
+            <a href="">js</a>
+    
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>html5+css3</h1>
+            <p>html5+css3讲解</p>
+            <section>
+                <h4>html5</h4>
+                <p>html5是html的最新版本..........</p>
+            </section>
+            <section>
+                <h4>css3</h4>
+                <p>css3新特性..........</p>
+            </section>
+        </article>
+        <aside>
+            <h1>html5结构元素</h1>
+            <p>header. footer. section.....</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">html5</a>
+                        <a href="">css3</a>
+                        <a href="">js</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+    <footer>
+        <p>CopyRight : 2019 小滴课堂</p>
+    </footer>
+
+    <!-- 进度条 -->
+    进度条：<progress max="100" value="30"></progress>
+    <!-- 标记 -->
+    <p><mark>html5</mark>是html的最新版本</p>
+    <!-- 嵌入指定内容比如插件 -->
+    <embed src="../../img/logo.png" type="">
+
+</body>
+</html>

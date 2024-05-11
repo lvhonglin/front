@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" autocomplete="on">
+        <!-- autofocus自动获取焦点，只能配置一个 -->
+        <!-- pattern表示校验value的值只能输入A-Z和a-z，且必须输入3个字母 -->
+        用户名：<input type="text" name="username" autofocus pattern="[A-Za-z]{3}" placeholder="请输入用户名">
+        <!-- email也可以设置multiple属性，意思是多个邮件用逗号分隔 -->
+        <!-- required表示必须填写不能为空 -->
+        email：<input type="email" name="email" autocomplete="off" multiple required>
+        <!-- 宽和高只对image类型的input标签生效 -->
+        <input type="image" src="img/logo.png" width="100px" height="100px">
+        <!-- multiple表示可以批量选择文件 -->
+        <input type="file" multiple>
+        提交：<input type="submit">
+    </form>
+</body>
+</html>

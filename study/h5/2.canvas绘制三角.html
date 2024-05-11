@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="500px" height="400px" style="border: 1px solid black;"></canvas>
+    <script>
+        //获取道canvas元素
+        var canvas=document.getElementById("mycanvas")
+        //获取canvas上下文
+        var ctx=canvas.getContext("2d")
+        // 开始一段路径
+        ctx.beginPath()
+        //将画笔指定初始坐标点
+        ctx.moveTo(100,100)
+        //添加一个点，画一条线条到这个点
+        ctx.lineTo(300,100)
+        ctx.lineTo(100,200)
+        //关闭路径，闭合从起始坐标点到结束坐标点
+        ctx.closePath()
+        //进行绘制操作
+        ctx.stroke()
+    </script>
+</body>
+</html>

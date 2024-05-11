@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        body{
+            background: #f6f6f6;
+        }
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            /* 垂直居中 */
+            line-height: 50px;
+            background: #fff;
+            padding-left: 5%;
+        }
+        .header img{
+            /* 垂直居中 */
+            vertical-align: middle;
+        }
+        .logo{
+            width: 82px;
+            height: 24px;
+            margin-right: 45%;
+        }
+        .search,.userimg{
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .bannerwrap{
+            /* 设置为50px的目的是不和头部重叠，头部的height也是50px */
+            margin-top: 50px;
+           
+        }
+        .bannerwrap img{
+            width: 100%;
+           
+        }
+        .classifywrap{
+            margin-top: 10px;
+            background: #fff;
+            padding-bottom: 5px;
+        }
+        .classify{
+            overflow: hidden;
+        }
+        .classify li{
+            float: left;
+            width: 25%;
+            text-align: center;
+        }
+        .classify .list{
+            color: #738c8d;
+        }
+        .classify .icon{
+            /* 因为水平居中的text-align适用于行内块级元素，而div是块级元素，所以
+            想要让圆形水平居中需要，将其设置为行内块级元素 */
+            display: inline-block;
+            line-height: 50px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #4a95dc;
+            font-size: 18px;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .coursewrap{
+            background: #fff;
+            width: 100%;
+            /* padding-right: 5%; */
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .hotwrap{
+            height: 50px;
+            line-height: 50px;
+            margin-left: 10px;
+        }
+        .hotwrap img{
+            width: 25px;
+            height: 25px;
+            vertical-align: text-bottom;
+            
+        }
+        .coursewrap{
+            overflow: hidden;
+            margin-bottom: 91px;
+        }
+        .coursewrap li{
+            float: left;
+            width: 46%;
+            margin-bottom: 10px;
+            margin-left: 2%;
+            margin-right: 2%;
+           
+        }
+        .courseposter{
+            width: 100%;
+            height: 160px;
+        }
+        .courseposter img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .coursetitle{
+            font-size: 13px;
+            color: #333;
+            margin-top: 5px;
+        }
+        .levelprice{
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .level{
+            float: left;
+            font-size: 12px;
+            color: #333;
+        }
+        .price{
+            float: right;
+            font-size: 12px;
+            color: red;
+        }
+        #bottomnav{
+            position: fixed;
+            bottom: 0;
+            left: 0; 
+            width: 100%;
+        }
+        .nav{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+       
+    </style>
+</head>
+<body>
+    <!-- 页面头部 -->
+    <div class="header">
+        <img class="logo" src="img/logo.png" alt="">
+        <img class="search" src="img/search.png" alt="">
+        <img class="userimg" src="img/userimg.png" alt="">
+    </div>
+    <!-- 轮播图 -->
+    <div class="bannerwrap">
+        <img src="./img/banner.jpeg" alt="">
+    </div>
+    <!-- 分类 -->
+    <div class="classifywrap">
+        <ul class="classify">
+            <li>
+                <div class="icon">后</div>
+                <p class="list">后端</p>
+            </li>
+            <li>
+                <div class="icon">前</div>
+                <p class="list">前端</p>
+            </li>
+            <li>
+                <div class="icon">测</div>
+                <p class="list">测试</p>
+            </li>
+            <li>
+                <div class="icon">维</div>
+                <p class="list">运维</p>
+            </li>
+        </ul>
+    </div>
+    <!-- 课程模块 -->
+    <div class="coursewrap">
+        <div class="hotwrap">
+            <img src="img/hot.png" alt="">
+            热门视频
+        </div>
+        <ul class="courselist">
+            <li>
+                <div class="courseposter">
+                    <img src="img/1.png" alt="">
+                </div>
+                <p class="coursetitle">Spring Boot 2.x零基础入门到高级实战教程</p>
+                <div class="levelprice">
+                    <p class="level">级别: 中级</p>
+                    <p class="price">价钱：$29.8</p>
+                </div>
+            </li>
+            <li>
+                <div class="courseposter">
+                    <img src="img/1.png" alt="">
+                </div>
+                <p class="coursetitle">Spring Boot 2.x零基础入门到高级实战教程</p>
+                <div class="levelprice">
+                    <p class="level">级别: 中级</p>
+                    <p class="price">价钱：$29.8</p>
+                </div>
+            </li>
+            <li>
+                <div class="courseposter">
+                    <img src="img/1.png" alt="">
+                </div>
+                <p class="coursetitle">Spring Boot 2.x零基础入门到高级实战教程</p>
+                <div class="levelprice">
+                    <p class="level">级别: 中级</p>
+                    <p class="price">价钱：$29.8</p>
+                </div>
+            </li>
+            <li>
+                <div class="courseposter">
+                    <img src="img/1.png" alt="">
+                </div>
+                <p class="coursetitle">Spring Boot 2.x零基础入门到高级实战教程</p>
+                <div class="levelprice">
+                    <p class="level">级别: 中级</p>
+                    <p class="price">价钱：$29.8</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 底部导航 -->
+    <div class="classifywrap" id="bottomnav">
+        <ul class="classify">
+            <li>
+                <div class="icon">
+                    <img class="nav" src="img/1.png" alt="">
+                </div>
+                <p class="list">首页</p>
+            </li>
+            <li>
+                <div class="icon">
+                    <img class="nav" src="img/2.png" alt="">
+                </div>
+                <p class="list">课程</p>
+            </li>
+            <li>
+                <div class="icon">
+                    <img class="nav" src="img/1.png" alt="">
+                </div>
+                <p class="list">购物车</p>
+            </li>
+            <li>
+                <div class="icon">
+                    <img class="nav" src="img/2.png" alt="">
+                </div>
+                <p class="list">运维</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
