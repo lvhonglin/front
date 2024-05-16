@@ -1,0 +1,12 @@
+h1~p{
+    color: red;
+} 
+div[class^="css"]{
+    background: red;
+}
+div[class*="csscsa"]{
+    background: black;
+}
+:target{
+    background: yellow;
+}

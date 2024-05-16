@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- localstorage在html关闭之后设置的值也不会删除 -->
+    <!-- localStorage和sessionStorage大小限制一般是5m -->
+    <!-- 都是同源共享的，只要与域名一样,在任何html页面都能获取到 -->
+    <script>
+        //第一种设置localstorage的方式
+        localStorage.username="eric"
+        localStorage.tel=1
+        console.log("用户名是:"+localStorage.username)
+        //第二种设置localstorage的方式
+        localStorage.setItem("password","123")
+        var pass=localStorage.getItem("password")
+        console.log("打印密码："+pass)
+       
+        //获取索引的key值
+        var name=localStorage.key(0)
+        console.log("第一个索引："+name)
+
+        var tel=localStorage.getItem("tel")
+        console.log("tel加1："+(Number(tel)+1))
+         //删除单个数据
+         localStorage.removeItem("username")
+
+         //删除所有数据
+         localStorage.clear
+    </script>
+</body>
+</html>

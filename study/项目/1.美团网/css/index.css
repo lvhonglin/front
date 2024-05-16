@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f9f7f8;
+}
+
+.navbar{
+    background: white;
+    display: flex;
+    height: 40px;
+    color: black;
+
+}
+.navbar .nav-city{
+    font-size: 14px;
+    /* 表示上下是0，左右是15px */
+    margin: 0 15px;
+}
+.navbar .navbar-left{
+    line-height: 40px;
+    height: 40px;
+}
+.icon-downnarrow{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+
+    /* 旋转45度 */
+    transform: rotate(-45deg);
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    /* 上右下左 */
+    margin: 0 0 4px 6px;
+}  
+.nav-search{
+    background: red;
+    line-height: 30px;
+    height: 30px;
+    flex: 1;
+    border-radius: 15px;
+    /* 表示上下是0px，左右是26px */
+    padding : 0 26px;
+    margin: 5px 15px 0px 0px;
+}
+.nav-search input{
+    display: block;
+    height: 100%;
+    background: transparent;
+    /* border和outline设置为none，点击就不会出现边框了 */
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
