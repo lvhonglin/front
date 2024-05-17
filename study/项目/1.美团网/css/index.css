@@ -5,13 +5,12 @@
 body{
     background: #f9f7f8;
 }
-
+/* 最上方导航栏 */
 .navbar{
     background: white;
     display: flex;
     height: 40px;
     color: black;
-
 }
 .navbar .nav-city{
     font-size: 14px;
@@ -35,7 +34,7 @@ body{
     margin: 0 0 4px 6px;
 }  
 .nav-search{
-    background: red;
+    background: #f9f7f8;
     line-height: 30px;
     height: 30px;
     flex: 1;
@@ -53,4 +52,105 @@ body{
     outline: none;
     width: 100%;
     font-size: 14px;
+}
+/* 广告 */
+.banner{
+    margin-top: 5px;
+    padding: 5px 10px;
+    background: white;
+}
+.banner img{
+    width: 100%;
+    /* 加下方的阴影 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+/* 导航菜单 */
+.navlist{
+    background: white;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+ul{
+    list-style: none;
+}
+.navlist ul{
+    display: flex;
+   
+    flex-wrap: wrap;
+}
+.navlist .nav-item{
+    /* 第一个参数表示flex-grow，第二个参数表示f-shrink、第三个参数表示默认的宽度 */
+    flex: 0 0 20%;
+    /* text-align只能控制元素内文本的对齐 */
+    text-align: center;
+    margin: 10px 0px;
+}
+.navlist .nav-des{
+    color: #333;
+    font-size: 15px;
+}
+.nav-item .nav-icon{
+    /* 为什么需要设置display等于block，因为span是行内元素，没法设置宽高，所以需要改成块级元素，让其支持宽高 */
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fd9d21;
+    /* 这个表示上是0，右是auto，下是7px，左是auto */
+    margin: 0 auto 7px;
+    color: white;
+    font-size: 25px;
+    line-height: 40px;
+}
+a{
+    /* 这个样式是让超链接下面没有横线 */
+    text-decoration: none;
+}
+
+/* 拼团的样式 */
+.boxWrapper{
+    background: white;
+    padding: 10px;
+}
+.boxWrapper h4{
+    color: black;
+    margin-bottom: 10px;
+}
+.box-list{
+    display: flex;
+    justify-content: space-between;
+}
+.box-list .box-item{
+    width: 49%;
+    display: inline-block;
+
+}
+.box-item img{
+    width: 100%;
+    border-radius: 10px;
+    
+}
+.box-item .item-title{
+    text-align: center;
+    font-size: 15px;
+    /* 表示不换行 */
+    white-space: nowrap;
+    /* 表示当文字超过宽度则显示省略号 */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 15px;
+}
+.box-item .price {
+    text-align: center;
+    
+}
+.price .strong{
+    font-size: 18px;
+    color: #ff6633;
+}
+.price .line-price{
+    font-size: 12px;
+    color: #666666;
+    /* 表示字体中间有横线穿过 */
+    text-decoration: line-through;
 }
