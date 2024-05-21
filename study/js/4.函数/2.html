@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function(){
+            function Sum(){
+
+            }
+            Sum.prototype.add=function(num1,num2){
+                return num1+num2
+            }
+            // 如果windows有Sum,在外层就可以直接用Sum
+            window.Sum=Sum
+         
+        })()
+        var sum=new Sum()
+        var a=sum.add(1,2)
+        console.log(a)
+    </script>
+</body>
+</html>

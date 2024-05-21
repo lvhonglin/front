@@ -11,6 +11,9 @@ body{
     display: flex;
     height: 40px;
     color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .navbar .nav-city{
     font-size: 14px;
@@ -53,11 +56,13 @@ body{
     width: 100%;
     font-size: 14px;
 }
+
 /* 广告 */
 .banner{
-    margin-top: 5px;
+    margin-top: 45px;
     padding: 5px 10px;
     background: white;
+
 }
 .banner img{
     width: 100%;
@@ -153,4 +158,105 @@ a{
     color: #666666;
     /* 表示字体中间有横线穿过 */
     text-decoration: line-through;
+}
+/* 猜你喜欢 */
+.guesslike{
+    margin-top: 10px;
+    padding: 0 10px 10px 10px;
+    background: white;
+}
+.guesslike .title{
+    text-align: center;
+    color: #666666;
+    background: white;
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px solid #ddd8ce;
+}
+.item-box img{
+    height: 90px;
+    width: 90px;
+}
+.guessItem{
+    padding: 15px 0;
+     /* 因为需要对门市价也就是.retail-price设置定位方式，需要在 */
+    /* 父级元素上设置定位 */
+    position: relative;
+    border-bottom: 1px solid #ddd8ce;
+    margin-bottom: 47px;
+}
+/* 伪类表示最后一个guessIem，不加边框 */
+.guessItem:last-child{
+    border: none;
+}
+.guessItem .item-href{
+    display: flex;
+}
+.item-des{
+    margin: 0 0 0 10px;
+   
+}
+.item-name{
+    font-size: 18px;
+    color: black;
+    margin: 0 0 2px ;
+}
+.item-title{
+    font-size: 15px;
+    color: #666666;
+    margin: 0 15px 6px 0 ;
+}
+.item-des .strong{
+    font-size: 22px;
+    color: #ff0000;
+}
+.retail-price,.selNum{
+    font-size: 14px;
+    color: #666666;
+    
+}
+.selNum{
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+}
+.retail-price{
+    
+}
+/* 伪类，表示strong元素的前面 */
+/* 美元符号 */
+.guessItem .item-des .strong::before{
+    /* 美元符号 */
+    content: '\A5';
+    font-size: 14px;
+    color: #ff0000;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    background: white;
+    width: 100%;
+    
+}
+footer .nav-menu{
+    display: flex;
+}
+.nav-item{
+    /* 表示横向填满 */
+    flex: 1;
+    text-align: center;
+}
+.nav-item a{
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    height: 47px;
+
+}
+.nav-item a span{
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    line-height: 47px;
+    
 }

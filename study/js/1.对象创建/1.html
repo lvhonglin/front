@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 方式1
+        var type1={
+            Name:"type1111"
+        }
+        console.log(type1.Name)
+        // 方式2
+        var type2=new Object()
+        type2.Name="type2222"
+        console.log(type2.Name)
+        // 方式3
+        function Type3(name){
+            this.Name=name
+        }
+        var type3=new Type3("type3333")
+        console.log(type3.Name)
+        // 方式4
+        function Type4(obj){
+            this.Name=obj.name
+        }
+        var type4=new Type4({'name':"type4444"})
+        console.log(type4.Name) 
+   </script>
+</body>
+</html>

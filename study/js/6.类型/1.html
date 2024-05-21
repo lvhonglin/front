@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array=[]
+        var obj={}
+        var a=123
+        var b=true
+        var c="123"
+        var d=function(){
+        }
+        function Cla(){
+
+        }
+        var f=new Cla()
+        //true,因为instanceof只能判断是否是复杂类型
+        console.log(array instanceof Array)
+        console.log(obj instanceof Object)
+        console.log(d instanceof Function)
+        console.log(f instanceof Cla)
+        console.log(a instanceof Number)
+        console.log(b instanceof Boolean)
+        console.log(c instanceof String)
+        
+        console.log("=======")
+        console.log(typeof array)
+        console.log(typeof obj)
+        console.log(typeof d)
+        console.log(typeof f)
+        console.log(typeof a)
+        console.log(typeof b)
+        console.log(typeof c)
+    
+
+        
+    </script>
+</body>
+</html>

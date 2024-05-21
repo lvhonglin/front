@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //深拷贝
+        var a={age:18}
+        var b=JSON.stringify(a)
+        var c=JSON.parse(b)
+        console.log(a.age)
+        console.log(c.age)
+        console.log(typeof b)
+        console.log(typeof a)
+        console.log(typeof c)
+
+        //测试1——深拷贝只针对复杂类型而言
+        var aa=1
+        var bb=aa
+        aa=2   
+        console.log(aa,bb)
+        //测试2——测试对象里面引用了数组
+        var d={
+            user:["lucy1","dean1"]
+        }
+        e=JSON.stringify(d)
+        f=JSON.parse(e)
+        d.user[1]="moon1"
+        console.log(d.user[1])
+        console.log(f.user[1])
+        
+    </script>
+</body>
+</html>

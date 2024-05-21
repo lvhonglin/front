@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><p>hello第一天</p></div>
+    <script>
+        document.write("哇哈哈哈哈")
+        var xd="小滴课堂"
+        document.write(xd)
+        var dd=1
+        document.write(typeof xd)
+        document.write(typeof dd)
+
+        var my={
+            name: "张三",
+            print:function(){
+                console.log(this.name);
+            }
+        }
+        my.print()
+        var my1=new Object()
+        console.log(my1)
+
+        function User(name,age){
+            this.name=name
+            this.age=age
+        }
+        a=new User('lucy',18)
+        console.log(a.name)
+    </script>
+</body>
+</html>
