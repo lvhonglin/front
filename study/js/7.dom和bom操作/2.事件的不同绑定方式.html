@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div onclick="test()">小滴课堂</div>
+    <div>小滴课堂官网</div>
+    <div>xdclass.net</div>
+    <script>
+        // 方式1
+        function test(){
+            console.log("我点击了")
+        }
+        // 方式2
+        var wangzhi=document.getElementsByTagName("div")[1]
+        wangzhi.onclick=function(){
+            console.log("我点击了小滴课堂官网")
+        }
+
+        // 方式3
+        var wangzhi2=document.getElementsByTagName("div")[2]
+        function test1(){
+            console.log("我点击了xdclass.net1")
+        }
+        function test2(){
+            console.log("我点击了xdclass.net2")
+        }
+        wangzhi2.addEventListener('click',test1)
+        // 如果注册多个监听事件，按顺序执行
+        wangzhi2.addEventListener('click',test2)
+
+        //删除监听事件
+        // wangzhi2.removeEventListener('click',test2)
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

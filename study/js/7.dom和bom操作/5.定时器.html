@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1)
+        console.log(2)
+        console.log(3)
+        // 延时执行：setTimeout是异步的，不会阻塞的
+        var timer=setTimeout(function(){
+            console.log(5)
+        },3000)
+        console.log(4)
+        // 清除定时器
+        clearTimeout(timer)
+
+
+        var timer2=setInterval(function(){
+            console.log("定时执行")
+        },3000)
+        // clearInterval(timer2)
+    </script>
+</body>
+</html>

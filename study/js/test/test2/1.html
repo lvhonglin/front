@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var removeDuplicateLetters = function(s) {
+            var visit=new Array(26).fill(0)
+            var num=_.countBy(s)
+            var sb=new Array()
+            for(var i=0;i<s.length;i++){
+                var ch=s[i]
+                if (!visit[ch.charCodeAt()-'a'.charCodeAt()]){
+                    while(sb.length>0&&sb[sb.length-1]>ch){
+                        if (num[sb[sb.length-1]]>0){
+                            visit[sb[sb.length-1].charCodeAt()-'a'.charCodeAt()]=0
+                            sb.pop()
+                        }else{
+                            break
+                        }
+                    }
+                    visit[ch.charCodeAt()-'a'.charCodeAt()]=1
+                    sb.push(ch)
+                }
+                num[ch]--
+            }
+            return sb.join('')
+        };
+    </script>
+</body>
+</html>

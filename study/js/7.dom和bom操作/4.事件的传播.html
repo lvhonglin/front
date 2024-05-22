@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="father">
+        我是一个列表
+        <li id="son1">第1个</li>
+        <li id="son2">第2个</li>
+        <li id="son3">第3个</li>
+        <li id="son4">第4个</li>
+        <li id="son5">第5个</li>
+    </ul>
+    <script>
+        //点击子元素会冒泡上升到父元素，父元素可以通过e，获取到点击的是哪个子元素
+        document.getElementById("father").addEventListener('click',function(e){
+            if (e.target.textContent=='第4个'||e.target.textContent=='第5个'){
+                console.log('点击父元素了')
+            }
+        })
+
+        document.getElementById("son1").addEventListener('click',function(e){
+            console.log(e.target.innerText)
+        })
+        document.getElementById("son4").addEventListener('click',function(e){
+            console.log(e.target.innerText)
+            
+        })
+        document.getElementById("son5").addEventListener('click',function(e){
+            // 正常来说点击子元素会触发父元素的事件，但是加上这个就不会触发父元素了
+            e.stopPropagation()
+            console.log(e.target.innerText)
+            
+        })
+    </script>
+</body>
+</html>
