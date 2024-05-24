@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">hello,{{name}}
+        <!-- v-bind:href可以省略成 :href -->
+        <a v-bind:href="url">跳转官网</a>
+        <h3>单项数据绑定，修改vue的数据会影响html</h3>
+        <input type="text" :value="name"/>
+        <h3>双向数据绑定，修改html的数据会影响vue，修改vue的数据会影响html，只适用于input标签</h3>
+        <!-- 可以把v-model:value简写成，v-model -->
+        <input type="text" v-model:value="name">
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                name:"小滴课堂",
+                url:'https://xdclass.net'
+            },
+        })
+       
+    </script>
+</body>
+</html>

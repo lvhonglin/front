@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 案例1 -->
+    <div id="app">
+        <!-- 可以用v-on:click也可以用@click -->
+        <!-- xd('小滴课堂')表示往xd函数里面传参 -->
+        <h3 v-on:click="xd('小滴课堂')">点击小滴课堂</h3>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                name:"小滴课堂"
+            },
+            methods:{
+                xd(t){
+                    alert(t)
+                }
+            }
+        })
+    </script>
+
+<!-- 案例2——给函数传参 -->
+<div id="app2">
+    <h3 v-on:click="xd($event)">点击百度</h3>
+</div>
+<script>
+    new Vue({
+        el:'#app2',
+        data:{
+            name:"小滴课堂"
+        },
+        methods:{
+            xd(e){
+                alert(e.target.innerText)
+            }
+        }
+    })
+</script>
+
+<!-- 案例3—阻止默认行为 -->
+<div id="app3">
+    <!-- 如果xd方法需要参数就得xd()带括号，如果没有参数就不需要带括号 -->
+    <a href="https://xdclass.net" @click="xd">跳转阻止href的默认行为跳转</a>
+</div>
+<script>
+    new Vue({
+        el:'#app3',
+        data:{
+            name:"小滴课堂"
+        },
+        methods:{
+            xd(e){
+                // 阻止a标签的默认行为跳转
+                e.preventDefault()
+                alert(e.target.innerText)
+            }
+        }
+    })
+</script>
+
+
+<!-- 案例4—阻止事件冒泡 -->
+<div id="app4">
+    <h3 @click="xd">点击了
+        <a href="#" @click="xd">跳转阻止冒泡</a>
+    </h3>
+</div>
+<script>
+    new Vue({
+        el:'#app4',
+        data:{
+            name:"小滴课堂"
+        },
+        methods:{
+            xd(e){
+                e.stopPropagation();
+                alert(e.target.innerText)
+            }
+        }
+    })
+</script>
+
+
+
+<!-- 案例5—只触发一次 -->
+<div id="app5">
+    <h3 @click.once="xd">点击了只触发一次
+    </h3>
+</div>
+<script>
+    new Vue({
+        el:'#app5',
+        data:{
+            name:"小滴课堂"
+        },
+        methods:{
+            xd(e){
+                alert(e.target.innerText)
+            }
+        }
+    })
+</script>
+</body>
+</html>
