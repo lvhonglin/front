@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var topKFrequent = function(nums, k) {
+            if(k==0){
+                return new Array()
+            }
+            var map=new Map()
+            for(var i=0;i<nums.length;i++){
+                var tmp=map.get(nums[i])
+                if(tmp==null){
+                    map.set(nums[i],1)
+                }else{
+                    map.set(nums[i],tmp+1)
+                }
+            }
+            var map2=new Map()
+            map.forEach((value, key) => {
+                    var tmp2=map2.get(value)
+                    if(tmp2==null){
+                        map2.set(value,[key])
+                    }else{
+                        tmp2.push(key)
+                    }
+                });
+            console.log(map2)
+            var res=new Array()
+            for(var i=nums.length;i>0;i--){
+                if(!map2.has(i)){
+                    continue
+                }
+                var arr=map2.get(i)
+                for(var j=0;j<arr.length;j++){
+                    res.push(arr[j])
+                }
+                if(res.length==k){
+                    break
+                }
+            }
+            return res
+        };
+        var tmp=topKFrequent([1,1,1,2,2,3],2)
+        console.log(tmp)
+        console.log(typeof tmp)
+    </script>
+</body>
+</html>
