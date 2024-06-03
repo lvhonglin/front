@@ -7,8 +7,12 @@
                 <li v-for="g in games" :key="g.id">{{ g.name }}</li>
             </ul>
             </Category>
-            <Category title="热门游戏列表" ></Category>
-            <Category title="热门游戏列表" ></Category>
+            <Category title="热门游戏列表" >
+                <img :src="imgUrl" alt="">
+            </Category>
+            <Category title="热门游戏列表" >
+               
+            </Category>
         </div>
     </div>
  </template>
@@ -35,6 +39,9 @@
      .content{
         display: flex;
         justify-content: space-evenly;
+     }
+     img{
+        width: 100%;
      }
      
  

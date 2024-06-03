@@ -1,7 +1,7 @@
 <template>
     <div class="category">
         <h2>{{title}}</h2>
-        <slot></slot>
+        <slot>默认内容</slot>
     </div>
  </template>
  
@@ -20,7 +20,7 @@
         border-radius: 10px;
         box-shadow: 0 0 10px;
         padding: 10px;
-        widows: 200px;
+        width: 200px;
         height: 300px;
     }
     h2{
