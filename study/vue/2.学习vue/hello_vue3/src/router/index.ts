@@ -13,6 +13,7 @@ import RefChildrenParent from '../pages/6.refChildrenParent/Father.vue'
 import Pinia from '../pages/7.pinia/Father.vue'
 import Slot from '../pages/8.slot/Father.vue'
 import Provide from '../pages/9.provide-inject/Father.vue'
+import ZuoyongyuSlot from '../pages/8.1.zuoyongyuslot/Father.vue'
 
 const router=createRouter({
     history:createWebHistory(),
@@ -48,6 +49,10 @@ const router=createRouter({
         {
             path:'/slot',
             component: Slot
+        },
+        {
+            path:'/zuoyongyuslot',
+            component: ZuoyongyuSlot
         },
         {
             path:'/provide',
