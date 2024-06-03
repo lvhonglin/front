@@ -1,12 +1,8 @@
 <template>
     <div class="main">
         <h2>游戏列表</h2>
-        <slot :games="games"></slot>
-        <!-- <div>
-            <ul>
-                <li v-for="g in games" :key="g.id">{{g.name}}</li>
-            </ul>
-        </div> -->
+        <slot name="s1" :youxi="games" x="哈哈" y="你好"></slot>
+        <slot name="s2" :youxi="games" x="哈哈" y="你好"></slot>
     </div>
    
    

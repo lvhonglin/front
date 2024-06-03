@@ -3,19 +3,24 @@
         <h3>父元素</h3>
         <div class="content">
             <Game>
-                <ul>
-                    <li v-for="g in games" :key="g.id">{{g.name}}</li>
-                </ul>
+                <template v-slot:s1="data" >
+                    <span>
+                        <ul>
+                            <li v-for="y in data.youxi" :key="y.id">{{ y.name }}</li>
+                        </ul>
+                    </span>
+                </template>
+                
             </Game>
             <Game>
-                <ul>
-                    <li v-for="g in games" :key="g.id">{{g.name}}</li>
-                </ul>
-            </Game>
-            <Game>
-                <ul>
-                    <li v-for="g in games" :key="g.id">{{g.name}}</li>
-                </ul>
+                <template #s2="data">
+                    <span>
+                        <ol>
+                            <li v-for="y in data.youxi" :key="y.id">{{ y.name }}</li>
+                        </ol>
+                    </span>
+                </template>
+                
             </Game>
         </div>
     </div>
