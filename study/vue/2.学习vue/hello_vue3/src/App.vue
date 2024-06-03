@@ -1,6 +1,8 @@
 <template>
-    <Count></Count>
-    <LoveTalk></LoveTalk>
+    <div>
+        <router-view></router-view>
+    </div>
+   
 </template>
 
 <script lang="ts">
@@ -9,8 +11,7 @@
     }
 </script>
 <script lang="ts" setup>
-    import Count from './components/Count.vue'
-    import LoveTalk from './components/LoveTalk.vue'
+    import { RouterView,RouterLink } from 'vue-router';
 </script>
 
 <style scoped>

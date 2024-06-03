@@ -1,0 +1,3 @@
+用于给孙子节点传值,也可以孙子修改爷爷的值（通过方法传递）
+要是father节点，传abcd给child，child只接收了a，那么attrs就会接收除了a的值，
+grandChild就会接收到bcd，因为bcd没有被人接收到
