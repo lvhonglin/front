@@ -2,10 +2,19 @@
     <div class="father">
         <h3>父元素</h3>
         <div class="content">
+            <!-- Category也可以写插槽（ v-slot:s2），只不过Category下的所有作为一个整体 v-slot:s2 -->
             <Category title="热门游戏列表" >
-            <ul>
-                <li v-for="g in games" :key="g.id">{{ g.name }}</li>
-            </ul>
+                <template v-slot:s1>
+                    <ul>
+                        <li v-for="g in games" :key="g.id">{{ g.name }}</li>
+                    </ul>
+                </template>
+                <!-- 可以写v-slot:s2也可以写成#s2 -->
+                <template #s2>
+                    <img :src="imgUrl" alt="">
+                </template>
+                
+           
             </Category>
             <Category title="热门游戏列表" >
                 <img :src="imgUrl" alt="">
